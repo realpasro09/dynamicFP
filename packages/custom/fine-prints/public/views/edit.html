@@ -11,23 +11,27 @@
                 </div>
             </div>
 
-            <div ng-switch="finePrint.selectedLayout">
-                <div ng-switch-when="FirstLayout">
-                    <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutOne.html'">
-                    </div>
-                </div>
-                <div ng-switch-when="SecondLayout">
-                    <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutTwo.html'">
-                    </div>
-                </div>
+            <div ng-switch="step">
+                <div ng-switch-when="1">
+                    <div ng-switch="finePrint.selectedLayout">
+                        <div ng-switch-when="FirstLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutOne.html'">
+                            </div>
+                        </div>
+                        <div ng-switch-when="SecondLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutTwo.html'">
+                            </div>
+                        </div>
 
-                <div ng-switch-when="ThirdLayout">
-                    <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutThree.html'">
-                    </div>
-                </div>
+                        <div ng-switch-when="ThirdLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutThree.html'">
+                            </div>
+                        </div>
 
-                <div ng-switch-when="FourthLayout">
-                    <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutFour.html'">
+                        <div ng-switch-when="FourthLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutFour.html'">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
