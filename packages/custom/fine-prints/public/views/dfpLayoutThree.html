@@ -1,3 +1,41 @@
 <section>
-    layout 3
+    <label class="message-title" mean-token="'create-title'">Fill every section and animate it</label>
+
+    <div class="layout-container">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <label class="label-dark">
+                    <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.field1MarkAsShowMeHow">
+                    <span>Mark as show me how</span>
+                </label>
+                <input type="text" ng-model="$parent.$parent.$parent.field1" placeholder="Title" class="button-dyp">
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row pull-down-20">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3">
+                <label class="label-dark">
+                    <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.field2MarkAsShowMeHow">
+                    <span>Mark as show me how</span>
+                </label>
+                <textarea ng-model="$parent.$parent.$parent.field2" placeholder="Add your Sidebar Content" class="content-text-area"></textarea>
+            </div>
+
+            <div class="col-md-7">
+                <label class="label-dark" >
+                    <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.field3MarkAsShowMeHow">
+                    <span>Mark as show me how</span>
+                </label>
+                <textarea ng-model="$parent.$parent.$parent.field3" placeholder="Add your content" class="content-text-area"></textarea>
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+    </div>
 </section>

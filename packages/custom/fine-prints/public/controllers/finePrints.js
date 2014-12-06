@@ -7,9 +7,9 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       name: 'fine-prints'
     };
       $scope.step = 1;
-      $scope.layoutData ="";
-      $scope.field1 ="";
-      $scope.field2 ="";
+      $scope.layoutData ='';
+      $scope.field1 ='';
+      $scope.field2 ='';
       $scope.field1MarkAsShowMeHow = false;
       $scope.field2MarkAsShowMeHow =false;
       $scope.setStep = function(step){
