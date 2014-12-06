@@ -97,7 +97,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       $scope.find = function() {
           FinePrints.query(function(finePrints) {
               $scope.finePrints = finePrints;
-              if($scope.finePrints.length == 0){
+              if($scope.finePrints.length === 0){
                   alertify.success('No fine prints. Create one.');
               }else{
                   alertify.success('Fine prints were loaded correctly.');
