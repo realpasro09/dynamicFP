@@ -52,13 +52,13 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 
               });
               finePrint.$save(function(response) {
-				  finePrint.link = finePrint.link  + response._id;
+				  finePrint.link = finePrint.link + finePrint.selectedLayout + '/'+ response._id;
 				  finePrint.$update(function(){
 					  $location.path('finePrint/' + response._id);
 					  alertify.success('Fine print with Id: '+response._id+' was created.');
 				  });
 
-              }).error(function(data, status, headers, config) {
+              },function(data, status, headers, config) {
                   alertify.error('Error trying to create the fine print.');
               });
 
@@ -79,7 +79,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
                   }
                   alertify.success('Fine print with Id: '+finePrint._id+' was removed.');
                   $location.path('finePrints');
-              }).error(function(data, status, headers, config) {
+              },function(data, status, headers, config) {
                   alertify.error('Error trying to remove the fine print with Id: '+finePrint._id+'.');
               });
           } else {
@@ -102,7 +102,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 
                   $location.path('finePrint/' + finePrint._id);
                   alertify.success('Fine print with Id: '+finePrint._id+' was updated.');
-              }).error(function(data, status, headers, config) {
+              },function(data, status, headers, config) {
                   alertify.error('Error trying to update the fine print with Id: '+finePrint._id+'.');
               });
 
@@ -122,7 +122,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
                   alertify.success('Fine prints were loaded correctly.');
               }
 
-          }).error(function(data, status, headers, config) {
+          }, function(data, status, headers, config) {
               alertify.error('Error loading the fine prints.');
           });
       };
