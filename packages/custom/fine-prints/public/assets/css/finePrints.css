@@ -18,3 +18,13 @@ body{
 .pull-down-20{
     margin-top: 18px;
 }
+
+.button-dyp{
+    width: 100%;
+}
+
+.content-text-area, .content-text-area:focus{
+    resize: none;
+    width: 100%;
+    min-height: 400px;
+}
