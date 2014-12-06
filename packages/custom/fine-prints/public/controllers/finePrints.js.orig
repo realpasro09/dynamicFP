@@ -6,7 +6,10 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
     $scope.package = {
       name: 'fine-prints'
     };
+
+
       $scope.step = 1;
+<<<<<<< HEAD
       $scope.link = '/DFP/';
       $scope.sharedLink = '';
       $scope.finePrint = {
@@ -21,6 +24,15 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
           field4MarkAsShowMeHow :false
       };
 
+=======
+      $scope.layoutData ='';
+      $scope.field1 ='';
+      $scope.field2 ='';
+      $scope.field1MarkAsShowMeHow = false;
+      $scope.field2MarkAsShowMeHow =false;
+	  $scope.link = '/DFP/';
+	  $scope.sharedLink = '';
+>>>>>>> 08202615dfc3534c1ea97831c0c9e18e81d9462a
       $scope.setStep = function(step){
           $scope.step = step;
       };
