@@ -32,9 +32,11 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
                   field1: $scope.field1,
                   field2: $scope.field2,
                   field3: $scope.field3,
+                  field4: $scope.field4,
                   field1MarkAsShowMeHow: $scope.field1MarkAsShowMeHow,
                   field2MarkAsShowMeHow: $scope.field2MarkAsShowMeHow,
-                  field3MarkAsShowMeHow: $scope.field3MarkAsShowMeHow
+                  field3MarkAsShowMeHow: $scope.field3MarkAsShowMeHow,
+                  field4MarkAsShowMeHow: $scope.field4MarkAsShowMeHow
               });
               finePrint.$save(function(response) {
                   $location.path('finePrint/' + response._id);
