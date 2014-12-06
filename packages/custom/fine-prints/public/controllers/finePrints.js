@@ -12,9 +12,20 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       $scope.field2 ='';
       $scope.field1MarkAsShowMeHow = false;
       $scope.field2MarkAsShowMeHow =false;
+	  $scope.link = '/dynamicFP/';
+	  $scope.sharedLink = '';
       $scope.setStep = function(step){
           $scope.step = step;
       };
+	  ZeroClipboard.setMoviePath('http://davidwalsh.name/demo/ZeroClipboard.swf');
+	  var clip = new ZeroClipboard.Client();
+	  clip.addEventListener('mousedown',function() {
+		  clip.setText(document.getElementById('linkToShare').value);
+	  });
+	  clip.addEventListener('complete',function(client,text) {
+		  alert('copied: ' + text);
+	  });
+	  clip.glue('copy');
 
       $scope.hasAuthorization = function(finePrint) {
           if (!finePrint || !finePrint.user){
@@ -36,11 +47,16 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
                   field1MarkAsShowMeHow: $scope.field1MarkAsShowMeHow,
                   field2MarkAsShowMeHow: $scope.field2MarkAsShowMeHow,
                   field3MarkAsShowMeHow: $scope.field3MarkAsShowMeHow,
-                  field4MarkAsShowMeHow: $scope.field4MarkAsShowMeHow
+                  field4MarkAsShowMeHow: $scope.field4MarkAsShowMeHow,
+				  link: $scope.link
               });
               finePrint.$save(function(response) {
-                  $location.path('finePrint/' + response._id);
-                  alertify.success('Fine print with Id: '+response._id+' was created.');
+				  finePrint.link = finePrint.link + finePrint.user + '/' + response._id
+				  finePrint.$update(function(){
+					  $location.path('finePrint/' + response._id);
+					  alertify.success('Fine print with Id: '+response._id+' was created.');
+				  });
+
               }).error(function(data, status, headers, config) {
                   alertify.error('Error trying to create the fine print.');
               });
@@ -115,6 +131,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
               finePrintId: $stateParams.finePrintId
           }, function(finePrint) {
               $scope.finePrint = finePrint;
+			  $scope.sharedLink = window.location + $scope.finePrint
               alertify.success('Fine print was loaded correctly.');
           }).error(function(data, status, headers, config) {
               alertify.error('Error loading the fine print with Id: '+$stateParams.finePrintId+'.');

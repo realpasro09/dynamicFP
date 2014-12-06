@@ -29,9 +29,9 @@ FinePrints.register(function(app, auth, database) {
         'link': 'create finePrint',
         'menu':'main'
     });
-  
-  FinePrints.aggregateAsset('css', 'finePrints.css');
 
+  FinePrints.aggregateAsset('css', 'finePrints.css');
+  FinePrints.aggregateAsset('js', 'ZeroClipboard.js')
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback
