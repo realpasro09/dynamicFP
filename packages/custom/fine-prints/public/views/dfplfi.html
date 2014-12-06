@@ -1,21 +1,15 @@
-<section data-ng-controller="FinePrintsController">
+<section>
 	<div class="form-group">
       <label style="color: black; font-weight: bold; font-size: 20px" mean-token="'create-title'">Fill every section and animate it</label>
       <div style="padding-right: 20px">
-        <label style="color: black"><input type="checkbox" name="checkbox" value="value"> <span style="padding-left: 5px;">Mark as show me how</span> </label>
-        <input style="border: 1px solid gray; font-weight: bold" name="title" type="text" class="form-control" id="title" placeholder="Title section" required>
+        <label style="color: black"><input type="checkbox" name="checkbox" data-ng-model="$parent.$parent.$parent.field1MarkAsShowMeHow"value="value"> <span style="padding-left: 5px;">Mark as show me how</span> </label>
+        <input style="border: 1px solid gray; font-weight: bold" name="title" type="text" class="form-control" id="title" placeholder="Title section" ng-model="$parent.$parent.$parent.field1" required>
       </div>
       <div style="padding-right: 20px; margin-top: 20px">
-        <label style="color: black"><input type="checkbox" name="checkbox" value="value"> <span style="padding-left: 5px;">Mark as show me how</span> </label>
-      	<textarea style="resize: none; border: 1px solid gray; padding: 0; height: 400px" class="form-control">
+        <label style="color: black"><input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.field2MarkAsShowMeHow"> <span style="padding-left: 5px;">Mark as show me how</span> </label>
+      	<textarea ng-model="$parent.$parent.$parent.field2" style="resize: none; border: 1px solid gray; padding: 0; height: 400px" class="form-control">
       		
       	</textarea>
       </div>
     </div>
-    <div class="form-group">
-          <div >
-            <button ng-click="$parent.setStep(1)" class="btn btn-info"> &larr; Select your favorite layout</button>
-            <button mean-token="'create-submit'" type="submit" class="btn btn-success">Generate your link</button>
-          </div>
-        </div>
 </section>

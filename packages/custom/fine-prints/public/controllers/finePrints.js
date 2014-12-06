@@ -7,7 +7,11 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       name: 'fine-prints'
     };
       $scope.step = 1;
-
+      $scope.layoutData ="";
+      $scope.field1 ="";
+      $scope.field2 ="";
+      $scope.field1MarkAsShowMeHow = false;
+      $scope.field2MarkAsShowMeHow =false;
       $scope.setStep = function(step){
           $scope.step = step;
       };
@@ -23,11 +27,11 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
           if (isValid) {
               var finePrint = new FinePrints({
                   title: this.title,
-                  selectedLayout: this.dataLayout,
-                  field1: this.field1,
-                  field2: this.field2,
-                  field1MarkAsShowMeHow: this.field1MarkAsShowMeHow,
-                  field2MarkAsShowMeHow: this.field1MarkAsShowMeHow
+                  selectedLayout: $scope.layoutData,
+                  field1: $scope.field1,
+                  field2: $scope.field2,
+                  field1MarkAsShowMeHow: $scope.field1MarkAsShowMeHow,
+                  field2MarkAsShowMeHow: $scope.field1MarkAsShowMeHow
               });
               finePrint.$save(function(response) {
                   $location.path('finePrint/' + response._id);
