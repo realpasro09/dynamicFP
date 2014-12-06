@@ -1,9 +1,9 @@
 <section data-ng-controller="FinePrintsController">
-    <form style="margin-left: 10px; width: 100%" name="finePrintsForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(finePrintsForm.$valid)" novalidate>
+    <form name="finePrintsForm" class="form-horizontal col-md-6 layout-form" role="form" data-ng-submit="create(finePrintsForm.$valid)" novalidate>
         <div ng-switch="step">
             <div ng-switch-when="1">
                 <div class="form-group" ng-class="{ 'has-error' : $parent.submitted && $parent.finePrints.title.$invalid }">
-                    <label style="color: black; font-weight: bold; font-size: 20px" mean-token="'create-title'">Title</label>
+                    <label class="title" mean-token="'create-title'">Title</label>
                     <div style="padding-right: 20px">
                         <input style="border: 1px solid gray;" name="title" type="text" class="form-control" data-ng-model="$parent.title" id="title" placeholder="Title" required>
                         <div ng-show="$parent.submitted && $parent.finePrintsForm.title.$invalid" class="help-block">

@@ -6,14 +6,23 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
     $scope.package = {
       name: 'fine-prints'
     };
+
+
       $scope.step = 1;
-      $scope.layoutData ='';
-      $scope.field1 ='';
-      $scope.field2 ='';
-      $scope.field1MarkAsShowMeHow = false;
-      $scope.field2MarkAsShowMeHow =false;
-	  $scope.link = '/dynamicFP/';
-	  $scope.sharedLink = '';
+      $scope.link = '/dynamicFP/';
+      $scope.sharedLink = '';
+      $scope.finePrint = {
+          layoutData :'',
+          field1 :'',
+          field2 :'',
+          field3 :'',
+          field4 :'',
+          field1MarkAsShowMeHow : false,
+          field2MarkAsShowMeHow :false,
+          field3MarkAsShowMeHow :false,
+          field4MarkAsShowMeHow :false
+      };
+
       $scope.setStep = function(step){
           $scope.step = step;
       };
@@ -30,16 +39,17 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
           if (isValid) {
               var finePrint = new FinePrints({
                   title: this.title,
-                  selectedLayout: $scope.layoutData,
-                  field1: $scope.field1,
-                  field2: $scope.field2,
-                  field3: $scope.field3,
-                  field4: $scope.field4,
-                  field1MarkAsShowMeHow: $scope.field1MarkAsShowMeHow,
-                  field2MarkAsShowMeHow: $scope.field2MarkAsShowMeHow,
-                  field3MarkAsShowMeHow: $scope.field3MarkAsShowMeHow,
-                  field4MarkAsShowMeHow: $scope.field4MarkAsShowMeHow,
-				  link: $scope.link
+                  selectedLayout: $scope.finePrint.layoutData,
+                  field1: $scope.finePrint.field1,
+                  field2: $scope.finePrint.field2,
+                  field3: $scope.finePrint.field3,
+                  field4: $scope.finePrint.field4,
+                  field1MarkAsShowMeHow: $scope.finePrint.field1MarkAsShowMeHow,
+                  field2MarkAsShowMeHow: $scope.finePrint.field2MarkAsShowMeHow,
+                  field3MarkAsShowMeHow: $scope.finePrint.field3MarkAsShowMeHow,
+                  field4MarkAsShowMeHow: $scope.finePrint.field4MarkAsShowMeHow,
+                  link: $scope.link
+
               });
               finePrint.$save(function(response) {
 				  finePrint.link = finePrint.link  + response._id;
