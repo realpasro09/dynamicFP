@@ -9,7 +9,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 
 
       $scope.step = 1;
-      $scope.link = '/dynamicFP/';
+      $scope.link = '/DFP/';
       $scope.sharedLink = '';
       $scope.finePrint = {
           layoutData :'',
