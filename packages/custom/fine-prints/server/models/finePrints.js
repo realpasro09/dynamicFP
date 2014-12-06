@@ -20,6 +20,29 @@ var FinePrintSchema = new Schema({
         required: true,
         trim: true
     },
+    selectedLayout: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    field1: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    field1MarkAsShowMeHow: {
+        type: Boolean,
+        required: true
+    },
+    field2: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    field2MarkAsShowMeHow: {
+        type: Boolean,
+        required: true
+    },
     user: {
         type: Schema.ObjectId,
         ref: 'User'

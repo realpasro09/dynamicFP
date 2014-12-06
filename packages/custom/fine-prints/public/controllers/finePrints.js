@@ -22,7 +22,12 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       $scope.create = function(isValid) {
           if (isValid) {
               var finePrint = new FinePrints({
-                  title: this.title
+                  title: this.title,
+                  selectedLayout: this.dataLayout,
+                  field1: this.field1,
+                  field2: this.field2,
+                  field1MarkAsShowMeHow: this.field1MarkAsShowMeHow,
+                  field2MarkAsShowMeHow: this.field1MarkAsShowMeHow
               });
               finePrint.$save(function(response) {
                   $location.path('finePrint/' + response._id);
