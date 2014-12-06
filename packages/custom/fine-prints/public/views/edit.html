@@ -1,19 +1,46 @@
 <section data-ng-controller="FinePrintsController" data-ng-init="findOne()">
-  <form style="margin-left: 10px; width: 100%" name="finePrintsForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(finePrintsForm.$valid)" novalidate>
-    <div class="form-group" ng-class="{ 'has-error' : submitted && finePrintsForm.title.$invalid }">
-      <label style="color: black; font-weight: bold; font-size: 20px" mean-token="'edit-title'" for="title">Title</label>
-      <div style="padding-right: 20px">
-        <input style="border: 1px solid gray;" name="title" type="text" class="form-control" data-ng-model="finePrint.title" id="title" placeholder="Title" required>
-        <div ng-show="submitted && finePrintsForm.title.$invalid" class="help-block">
-          <p ng-show="finePrintsForm.title.$error.required">Title is required</p>
-        </div>
-      </div>
+    <form style="margin-left: 10px; width: 100%" name="finePrintsForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(finePrintsForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && finePrintsForm.title.$invalid }">
 
-    </div>
-    <div class="form-group">
-      <div >
-        <button mean-token="'edit-submit'" type="submit" class="btn btn-success">Submit</button>
-      </div>
-    </div>
-  </form>
+            <label style="color: black; font-weight: bold; font-size: 20px" mean-token="'edit-title'" for="title">Title</label>
+
+            <div style="padding-right: 20px">
+                <input name="title" type="text" class="button-dyp" data-ng-model="finePrint.title" id="title" placeholder="Title" required/>
+                <div ng-show="submitted && finePrintsForm.title.$invalid" class="help-block">
+                    <p ng-show="finePrintsForm.title.$error.required">Title is required</p>
+                </div>
+            </div>
+
+            <div ng-switch="step">
+                <div ng-switch-when="1">
+                    <div ng-switch="finePrint.selectedLayout">
+                        <div ng-switch-when="FirstLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutOne.html'">
+                            </div>
+                        </div>
+                        <div ng-switch-when="SecondLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutTwo.html'">
+                            </div>
+                        </div>
+
+                        <div ng-switch-when="ThirdLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutThree.html'">
+                            </div>
+                        </div>
+
+                        <div ng-switch-when="FourthLayout">
+                            <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutFour.html'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div >
+                <button mean-token="'edit-submit'" type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </form>
 </section>

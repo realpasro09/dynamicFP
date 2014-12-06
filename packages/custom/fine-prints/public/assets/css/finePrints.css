@@ -8,7 +8,7 @@ body{
 }
 
 .simple-border{
-    border: 1px solid #282828;
+    border: 1px solid gray;
 }
 
 .layout-container{
@@ -43,4 +43,15 @@ body{
     color: black;
     font-weight: bold;
     font-size: 20px
+}
+
+.title{
+    color: black;
+    font-weight: bold;
+    font-size: 20px
+}
+
+.layout-form{
+    margin-left: 10px;
+    width: 100%;
 }
