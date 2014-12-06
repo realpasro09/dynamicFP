@@ -7,8 +7,9 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       name: 'fine-prints'
     };
       $scope.step = 1;
+
       $scope.setStep = function(step){
-       $scope.step = step;
+          $scope.step = step;
       };
 
       $scope.hasAuthorization = function(finePrint) {
