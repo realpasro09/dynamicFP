@@ -21,8 +21,7 @@ module.exports = function(FinePrints, app, auth, database) {
         .put(auth.requiresLogin, hasAuthorization, finePrints.update)
         .delete(auth.requiresLogin, hasAuthorization, finePrints.destroy);
 
-    // Finish with setting up the finePrintId param
-    app.param('finePrintId', finePrints.finePrint);
+
 
   app.get('/finePrints/example/anyone', function(req, res, next) {
     res.send('Anyone can access this');
@@ -44,4 +43,48 @@ module.exports = function(FinePrints, app, auth, database) {
       res.send(html);
     });
   });
+
+	app.get('/DFP/FirstLayout/:finePrintId', function(req, res, next) {
+		FinePrints.render('firstLayout', {
+			package: 'fine-prints',
+			finePrint: req.finePrint
+		}, function(err, html) {
+			//Rendering a view from the Package server/views
+			res.send(html);
+		});
+	});
+
+	app.get('/DFP/SecondLayout/:finePrintId', function(req, res, next) {
+		FinePrints.render('secondLayout', {
+			package: 'fine-prints',
+			finePrint: req.finePrint
+		}, function(err, html) {
+			//Rendering a view from the Package server/views
+			res.send(html);
+		});
+	});
+
+	app.get('/DFP/ThirdLayout/:finePrintId', function(req, res, next) {
+		FinePrints.render('thirdLayout', {
+			package: 'fine-prints',
+			finePrint: req.finePrint
+		}, function(err, html) {
+			//Rendering a view from the Package server/views
+			res.send(html);
+		});
+	});
+
+	app.get('/DFP/FourthLayout/:finePrintId', function(req, res, next) {
+		FinePrints.render('fourthLayout', {
+			package: 'fine-prints',
+			finePrint: req.finePrint
+		}, function(err, html) {
+			//Rendering a view from the Package server/views
+			res.send(html);
+		});
+	});
+
+	// Finish with setting up the finePrintId param
+	app.param('finePrintId', finePrints.finePrint);
+
 };

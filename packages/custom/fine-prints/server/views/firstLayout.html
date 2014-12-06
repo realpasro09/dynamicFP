@@ -1,0 +1,26 @@
+{% extends 'layouts/default.html' %}
+{% block content %}
+
+<section style="color:#2b3e50">
+	<div class="layout-container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<h1>{{ finePrint.field1 }}</h1>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+
+		<div class="row pull-down-20">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<p>
+					{{ finePrint.field2 }}
+				</p>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}
