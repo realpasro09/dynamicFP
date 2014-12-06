@@ -85,7 +85,7 @@ exports.show = function(req, res) {
  * List of Fine Prints
  */
 exports.all = function(req, res) {
-    FinePrint.find().sort('-created').populate('user', 'name username').exec(function(err, finePrints) {
+    FinePrint.find({user:req.user}).sort('-created').populate('user', 'name username').exec(function(err, finePrints) {
         if (err) {
             return res.json(500, {
                 error: 'Cannot list the finePrints'
