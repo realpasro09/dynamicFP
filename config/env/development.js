@@ -12,9 +12,9 @@ module.exports = {
     name: 'Dynamic Fine Prints - No more boring fine prints... Now, you are ready to read!'
   },
   facebook: {
-    clientID: 'DEFAULT_APP_ID',
-    clientSecret: 'APP_SECRET',
-    callbackURL: 'http://localhost:3000/auth/facebook/callback'
+    clientID: '330033637181364',
+    clientSecret: 'b44643f67c9785dc063abd540525a2b4',
+    callbackURL: 'http://ukkkada13baf.kmiloaguilar.koding.io:3000/auth/facebook/callback'
   },
   twitter: {
     clientID: 'DEFAULT_CONSUMER_KEY',
