@@ -9,7 +9,7 @@ module.exports = {
     debug: false
   },
   app: {
-    name: 'MEAN - FullStack JS - Development'
+    name: 'Dynamic Fine Prints - No more boring fine prints... Now, you are ready to read!'
   },
   facebook: {
     clientID: 'DEFAULT_APP_ID',
