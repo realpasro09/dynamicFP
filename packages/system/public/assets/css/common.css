@@ -1,3 +1,57 @@
+.landing{
+    background: white;
+    position: fixed;
+    padding: 0;
+    height: 75%;
+}
+.buttonAuthSelect {
+    margin: 5px 5px -4px 5px;
+    text-align: center; 
+    width: 150px; 
+    background: cornflowerblue !important; 
+    border-radius: 40px;
+    font-size: 15px;
+}
+
+.buttonSubAuthSelect {
+    margin: 0 5px 0 5px;
+    text-align: center; 
+    width: 100px; 
+    background: cornflowerblue !important; 
+    border-radius: 40px;
+    font-size: 15px;
+}
+.buttonSubAuthSelect:hover {
+    /*border: 1px solid black;*/
+    background: red !important; 
+}
+.buttonSelect:hover {
+    /*border: 1px solid black;*/
+    font-size: 20px;
+}
+
+.buttonSelect {
+    margin: 5px; 
+    text-align: center; 
+    width: 110px; 
+    background: cornflowerblue; 
+    border-radius: 40px;
+    font-size: 15px;
+}
+
+.buttonItemSelect {
+    margin: 5px; 
+    text-align: center; 
+    width: 250px; 
+    background: cornflowerblue; 
+    border-radius: 40px;
+    font-size: 15px;
+}
+.buttonItemSelect:hover {
+    /*border: 1px solid black;*/
+    font-size: 20px;
+}
+
 .page-header {
     padding-bottom: 0 !important;
     margin: 0 !important;
@@ -5,6 +59,8 @@
 }
 .page-header .navbar-nav {
     float: right;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
 }
 .page-header > div > div, .page-header > div > ul {
     display: inline-block;
@@ -32,7 +88,7 @@ footer {
 	bottom: 0;
 	height: 30px;
 	width: 100%;
-	background: #ddd;
+	background: #4e5d6c;
 	-webkit-box-shadow: 0 8px 6px 6px black;
 	-moz-box-shadow: 0 8px 6px 6px black;
 	box-shadow: 0 8px 6px 6px black

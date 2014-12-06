@@ -1,0 +1,19 @@
+<section data-ng-controller="FinePrintsController">
+	<div class="form-group">
+      <label style="color: black; font-weight: bold; font-size: 20px" mean-token="'create-title'">Fill every section and animate it</label>
+      <div style="padding-right: 20px">
+        <input style="border: 1px solid gray; font-weight: bold" name="title" type="text" class="form-control" id="title" placeholder="Title section" required>
+      </div>
+      <div style="padding-right: 20px; margin-top: 20px">
+      	<textarea style="resize: none; border: 1px solid gray; padding: 0; height: 400px" class="form-control">
+      		
+      	</textarea>
+      </div>
+    </div>
+    <div class="form-group">
+          <div >
+            <button ng-click="$parent.setStep(1)" class="btn btn-info"> &larr; Select your favorite layout</button>
+            <button mean-token="'create-submit'" type="submit" class="btn btn-success">Generate your link</button>
+          </div>
+        </div>
+</section>

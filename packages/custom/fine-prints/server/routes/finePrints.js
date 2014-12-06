@@ -1,7 +1,28 @@
 'use strict';
 
+var finePrints = require('../controllers/finePrints');
+
+// FinePrints authorization helpers
+var hasAuthorization = function(req, res, next) {
+    if (!req.user.isAdmin && req.article.user.id !== req.user.id) {
+        return res.send(401, 'User is not authorized');
+    }
+    next();
+};
+
 // The Package is past automatically as first parameter
 module.exports = function(FinePrints, app, auth, database) {
+
+    app.route('/finePrints')
+        .get(finePrints.all)
+        .post(auth.requiresLogin, finePrints.create);
+    app.route('/finePrints/:finePrintId')
+        .get(finePrints.show)
+        .put(auth.requiresLogin, hasAuthorization, finePrints.update)
+        .delete(auth.requiresLogin, hasAuthorization, finePrints.destroy);
+
+    // Finish with setting up the finePrintId param
+    app.param('finePrintId', finePrints.finePrint);
 
   app.get('/finePrints/example/anyone', function(req, res, next) {
     res.send('Anyone can access this');

@@ -3,7 +3,7 @@ html {
 }
 
 body.login, body.register,  body.forgot-password {
-background: url("/theme/assets/img/bg.png");
+    /*background: url("/theme/assets/img/bg.png");*/
     height: 100%;
     position: relative;
 }
@@ -47,9 +47,9 @@ background: url("/theme/assets/img/bg.png");
     font-style: normal;
 }
 .form {
-    background: #ffffff;
+    background: #4e5d6c;
     box-shadow: 0 1px 3px 1px #003644;
-    margin-top: 35px;
+    margin-top: 70px;
     left: 50%;
     position: relative;
 }
@@ -61,7 +61,7 @@ background: url("/theme/assets/img/bg.png");
 }
 
 .main-form.register-form {
-    height: 622px;
+    height: 600px;
 }
 
 .login-form__left {

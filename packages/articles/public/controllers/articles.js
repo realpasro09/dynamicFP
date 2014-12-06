@@ -5,8 +5,10 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
     $scope.global = Global;
 
     $scope.hasAuthorization = function(article) {
-      if (!article || !article.user) return false;
-      return $scope.global.isAdmin || article.user._id === $scope.global.user._id;
+      if (!article || !article.user)
+          return false;
+      var result = $scope.global.isAdmin || article.user._id === $scope.global.user._id;
+      return result;
     };
 
     $scope.create = function(isValid) {

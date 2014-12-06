@@ -17,12 +17,18 @@ FinePrints.register(function(app, auth, database) {
   FinePrints.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
-  FinePrints.menus.add({
-    title: 'finePrints example page',
-    link: 'finePrints example page',
-    roles: ['authenticated'],
-    menu: 'main'
-  });
+    FinePrints.menus.add({
+        'roles': ['authenticated'],
+        'title': 'Fine Prints',
+        'link': 'all finePrints',
+        'menu':'main'
+    });
+    FinePrints.menus.add({
+        'roles': ['authenticated'],
+        'title': 'Create New Fine Print',
+        'link': 'create finePrint',
+        'menu':'main'
+    });
   
   FinePrints.aggregateAsset('css', 'finePrints.css');
 

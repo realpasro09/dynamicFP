@@ -1,0 +1,20 @@
+<section data-ng-controller="FinePrintsController" data-ng-init="find()">
+  <ul class="finePrints unstyled">
+    <li data-ng-repeat="finePrint in finePrints">
+      <span style="color: blue; margin-top: 10px" >{{finePrint.created | date:'medium'}}</span> /
+      <span style="color: blue; margin-top: 10px" >{{finePrint.user.name}}</span>
+      <h2 style="margin-top: 0; margin-bottom: 10px">
+        <a style="color: black" data-ng-href="#!/finePrint/{{finePrint._id}}">{{finePrint.title}}</a>
+        <span data-ng-if="hasAuthorization(finePrint)">
+          <a style="color: black"class="btn" href="/#!/finePrint/{{finePrint._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a style="color: black" class="btn" data-ng-click="remove(finePrint);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+    </li>
+  </ul>
+  <h1 style="color: black; margin-top: 150px" data-ng-hide="!finePrints || finePrints.length">No Fine Prints yet. <br> Why don't you <a href="/#!/finePrint/create">Create One</a>?</h1>
+</section>
