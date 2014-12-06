@@ -30,3 +30,11 @@ body{
     width: 100%;
     min-height: 400px;
 }
+
+.label-dark{
+    color: black;
+}
+
+.label-dark span{
+    padding-left: 5px;
+}

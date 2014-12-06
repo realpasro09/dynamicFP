@@ -9,7 +9,6 @@ angular.module('mean.fine-prints').controller('LayoutTwoController', ['$scope', 
             name: 'fine-prints'
         };
 
-
         var init = function(){
             console.log('ddd');
         };
