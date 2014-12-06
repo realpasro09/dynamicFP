@@ -17,15 +17,6 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
       $scope.setStep = function(step){
           $scope.step = step;
       };
-	  ZeroClipboard.setMoviePath('http://davidwalsh.name/demo/ZeroClipboard.swf');
-	  var clip = new ZeroClipboard.Client();
-	  clip.addEventListener('mousedown',function() {
-		  clip.setText(document.getElementById('linkToShare').value);
-	  });
-	  clip.addEventListener('complete',function(client,text) {
-		  alert('copied: ' + text);
-	  });
-	  clip.glue('copy');
 
       $scope.hasAuthorization = function(finePrint) {
           if (!finePrint || !finePrint.user){
@@ -51,7 +42,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 				  link: $scope.link
               });
               finePrint.$save(function(response) {
-				  finePrint.link = finePrint.link + finePrint.user + '/' + response._id
+				  finePrint.link = finePrint.link  + response._id;
 				  finePrint.$update(function(){
 					  $location.path('finePrint/' + response._id);
 					  alertify.success('Fine print with Id: '+response._id+' was created.');
@@ -131,11 +122,11 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
               finePrintId: $stateParams.finePrintId
           }, function(finePrint) {
               $scope.finePrint = finePrint;
-			  $scope.sharedLink = window.location + $scope.finePrint
+			  $scope.sharedLink = window.location.origin + $scope.finePrint.link;
               alertify.success('Fine print was loaded correctly.');
-          }).error(function(data, status, headers, config) {
+          }), function(data, status, headers, config) {
               alertify.error('Error loading the fine print with Id: '+$stateParams.finePrintId+'.');
-          });
+          };
       };
 
   }

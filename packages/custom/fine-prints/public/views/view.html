@@ -1,17 +1,25 @@
-<section  data-ng-controller="FinePrintsController" data-ng-init="findOne()">
+<section  style="margin-left: 20px" data-ng-controller="FinePrintsController" data-ng-init="findOne()">
 	<span style="color: blue; margin-top: 10px">{{finePrint.created | date:'medium'}}</span> /
 	<span style="color: blue; margin-top: 10px">{{finePrint.user.name}}</span>
-	<h2 style="color: black; margin-top: 0" >{{finePrint.title}}</h2>
-	<div data-ng-if="hasAuthorization(finePrint)">
-		<a style="color: black" class="btn" href="/#!/finePrint/{{finePrint._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a style="color: black" class="btn" data-ng-click="remove(finePrint);">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
+	<table>
+		<tr>
+			<td>
+				<h2 style="color: black; margin-top: 0" >{{finePrint.title}}</h2>
+			</td>
+			<td>
+				<a style="color: black" class="btn" href="/#!/finePrint/{{finePrint._id}}/edit">
+					<i class="glyphicon glyphicon-edit"></i>
+				</a>
+				<a style="color: black" class="btn" data-ng-click="remove(finePrint);">
+					<i class="glyphicon glyphicon-trash"></i>
+				</a>
+			</td>
+		</tr>
+	</table>
+
+
 	<div>
-		<input name="linkToShare" id="linkToShare" style="padding: 20px; border: 1px solid #808080" type="text" ng-model="sharedLink">
+		<input name="linkToShare" id="linkToShare" style="padding: 10px; border: 1px solid #808080;width: 500px" type="text" ng-model="sharedLink">
 		<a id="copy" name="copy" style="color: black" class="btn">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
