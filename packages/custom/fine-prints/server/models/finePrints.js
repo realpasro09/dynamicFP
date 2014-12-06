@@ -43,6 +43,13 @@ var FinePrintSchema = new Schema({
         type: Boolean,
         required: true
     },
+    field3: {
+        type: String,
+        trim: true
+    },
+    field3MarkAsShowMeHow: {
+        type: Boolean
+    },
     user: {
         type: Schema.ObjectId,
         ref: 'User'
