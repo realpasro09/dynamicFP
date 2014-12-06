@@ -124,9 +124,9 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
               $scope.finePrint = finePrint;
 			  $scope.sharedLink = window.location.origin + $scope.finePrint.link;
               alertify.success('Fine print was loaded correctly.');
-          }), function(data, status, headers, config) {
+          }, function(data, status, headers, config) {
               alertify.error('Error loading the fine print with Id: '+$stateParams.finePrintId+'.');
-          };
+          });
       };
 
   }
