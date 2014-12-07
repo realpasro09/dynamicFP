@@ -3,9 +3,20 @@ body{
     color: #000000;
 }
 .btnHelper{
-	width: 350px;
 	margin-left: 5px;
 }
+
+.btnHelper.large{
+	width: 350px;
+}
+.btnHelper.medium{
+	width: 255px;
+}
+
+.btnHelper.small{
+	width: 114px;
+}
+
 .finePrints-example h1 {
   background-color: purple
 }
