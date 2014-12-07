@@ -4,11 +4,18 @@
 <section style="color:#2b3e50">
 
 	<div class="layout-container">
+		<a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a>
 		<div class="row">
 			<div class="col-md-1"></div>
 
 			<div class="col-md-10">
-				<h1>{{finePrint.field1}}</h1>
+				{% if finePrint.field1MarkAsShowMeHow%}
+				<div data-intro="">
+					{% endif %}
+					<h1>{{finePrint.field1}}</h1>
+					{% if finePrint.field1MarkAsShowMeHow%}
+				</div>
+				{% endif %}
 			</div>
 
 			<div class="col-md-1"></div>
@@ -18,15 +25,27 @@
 			<div class="col-md-1"></div>
 
 			<div class="col-md-3">
-				<p>
-					{{finePrint.field2}}
-				</p>
+				{% if finePrint.field2MarkAsShowMeHow%}
+				<div data-intro="">
+					{% endif %}
+					<p>
+						{{finePrint.field2}}
+					</p>
+					{% if finePrint.field2MarkAsShowMeHow%}
+				</div>
+				{% endif %}
 			</div>
 
 			<div class="col-md-7">
-				<p>
-					{{finePrint.field3}}
-				</p>
+				{% if finePrint.field3MarkAsShowMeHow%}
+				<div data-intro="">
+					{% endif %}
+					<p>
+						{{finePrint.field3}}
+					</p>
+					{% if finePrint.field3MarkAsShowMeHow%}
+				</div>
+				{% endif %}
 			</div>
 
 			<div class="col-md-1"></div>

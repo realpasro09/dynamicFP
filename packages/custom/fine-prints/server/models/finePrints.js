@@ -62,7 +62,23 @@ var FinePrintSchema = new Schema({
 		required: true,
 		trim: true
 	},
-    user: {
+	field1Help: {
+		type: String,
+		trim: true
+	},
+	field2Help: {
+		type: String,
+		trim: true
+	},
+	field3Help: {
+		type: String,
+		trim: true
+	},
+	field4Help: {
+		type: String,
+		trim: true
+	},
+	user: {
         type: Schema.ObjectId,
         ref: 'User'
     }

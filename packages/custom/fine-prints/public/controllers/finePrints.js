@@ -18,7 +18,11 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
           field1MarkAsShowMeHow : false,
           field2MarkAsShowMeHow :false,
           field3MarkAsShowMeHow :false,
-          field4MarkAsShowMeHow :false
+          field4MarkAsShowMeHow :false,
+		  field1Help: '',
+		  field2Help: '',
+		  field3Help: '',
+		  field4Help: ''
       };
 
       $scope.setStep = function(step){
@@ -46,7 +50,11 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
                   field2MarkAsShowMeHow: $scope.finePrint.field2MarkAsShowMeHow,
                   field3MarkAsShowMeHow: $scope.finePrint.field3MarkAsShowMeHow,
                   field4MarkAsShowMeHow: $scope.finePrint.field4MarkAsShowMeHow,
-                  link: $scope.link
+                  link: $scope.link,
+				  field1Help: $scope.finePrint.field1Help,
+				  field2Help: $scope.finePrint.field2Help,
+				  field3Help: $scope.finePrint.field3Help,
+				  field4Help: $scope.finePrint.field4Help
 
               });
               finePrint.$save(function(response) {

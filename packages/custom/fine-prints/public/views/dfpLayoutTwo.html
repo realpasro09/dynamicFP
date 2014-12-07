@@ -9,6 +9,7 @@
                 <label class="label-dark">
                     <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow">
                     <span>Mark as show me how</span>
+					<input type="text" name="textbox" class="btnHelper" ng-show="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field1Help" placeholder="Write some instructions for this section">
                 </label>
                 <input type="text" ng-model="$parent.$parent.$parent.finePrint.field1" placeholder="Title" class="button-dyp">
             </div>
@@ -23,6 +24,7 @@
                 <label class="label-dark" >
                     <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow">
                     <span>Mark as show me how</span>
+					<input type="text" name="textbox" class="btnHelper" ng-show="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field2Help" placeholder="Write some instructions for this section">
                 </label>
                 <textarea ng-model="$parent.$parent.$parent.finePrint.field2" placeholder="Add your content" class="content-text-area"></textarea>
             </div>
@@ -31,6 +33,7 @@
                 <label class="label-dark">
                     <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.finePrint.field3MarkAsShowMeHow">
                     <span>Mark as show me how</span>
+					<input type="text" name="textbox" class="btnHelper" ng-show="$parent.$parent.$parent.finePrint.field3MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field3Help" placeholder="Write some instructions for this section">
                 </label>
                 <textarea ng-model="$parent.$parent.$parent.finePrint.field3" placeholder="Add your Sidebar Content" class="content-text-area"></textarea>
             </div>

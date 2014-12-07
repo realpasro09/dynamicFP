@@ -9,6 +9,7 @@
                 <label class="label-dark">
                     <input type="checkbox" name="checkbox" data-ng-model="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow"value="value">
                     <span>Mark as show me how</span>
+					<input type="text" name="textbox" class="btnHelper" ng-show="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field1Help" placeholder="Write some instructions for this section">
                 </label>
 
                 <input name="title" type="text" class="button-dyp" id="title" placeholder="Title section" ng-model="$parent.$parent.$parent.finePrint.field1" required>
@@ -24,6 +25,7 @@
                 <label class="label-dark">
                     <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow">
                     <span>Mark as show me how</span>
+					<input type="text" name="textbox" class="btnHelper" ng-show="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field2Help" placeholder="Write some instructions for this section">
                 </label>
 
                 <textarea placeholder="Add your content" ng-model="$parent.$parent.$parent.finePrint.field2" class="content-text-area"></textarea>
