@@ -6,24 +6,24 @@
 }
 .buttonAuthSelect {
     margin: 5px 5px -4px 5px;
-    text-align: center; 
-    width: 150px; 
-    background: cornflowerblue !important; 
+    text-align: center;
+    width: 150px;
+    background: cornflowerblue !important;
     border-radius: 40px;
     font-size: 15px;
 }
 
 .buttonSubAuthSelect {
     margin: 0 5px 0 5px;
-    text-align: center; 
-    width: 100px; 
-    background: cornflowerblue !important; 
+    text-align: center;
+    width: 150px;
+    background: cornflowerblue !important;
     border-radius: 40px;
     font-size: 15px;
 }
 .buttonSubAuthSelect:hover {
     /*border: 1px solid black;*/
-    background: red !important; 
+    background: red !important;
 }
 .buttonSelect:hover {
     /*border: 1px solid black;*/
@@ -31,19 +31,19 @@
 }
 
 .buttonSelect {
-    margin: 5px; 
-    text-align: center; 
-    width: 110px; 
-    background: cornflowerblue; 
+    margin: 5px;
+    text-align: center;
+    width: 110px;
+    background: cornflowerblue;
     border-radius: 40px;
     font-size: 15px;
 }
 
 .buttonItemSelect {
-    margin: 5px; 
-    text-align: center; 
-    width: 250px; 
-    background: cornflowerblue; 
+    margin: 5px;
+    text-align: center;
+    width: 250px;
+    background: cornflowerblue;
     border-radius: 40px;
     font-size: 15px;
 }
