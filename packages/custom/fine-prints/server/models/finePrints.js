@@ -27,8 +27,7 @@ var FinePrintSchema = new Schema({
     },
     field1: {
         type: String,
-        required: true,
-        trim: true
+        required: true
     },
     field1MarkAsShowMeHow: {
         type: Boolean,
@@ -36,16 +35,14 @@ var FinePrintSchema = new Schema({
     },
     field2: {
         type: String,
-        required: true,
-        trim: true
+        required: true
     },
     field2MarkAsShowMeHow: {
         type: Boolean,
         required: true
     },
     field3: {
-        type: String,
-        trim: true
+        type: String
     },
     field3MarkAsShowMeHow: {
         type: Boolean

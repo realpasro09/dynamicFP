@@ -3,8 +3,7 @@ body{
     color: #000000;
 }
 .btnHelper{
-	width: 350px;
-	margin-left: 5px;
+	width: 100%;
 }
 .finePrints-example h1 {
   background-color: purple
@@ -32,6 +31,7 @@ body{
     resize: none;
     width: 100%;
     min-height: 400px;
+    white-space: pre;
 }
 
 .label-dark{
@@ -57,4 +57,12 @@ body{
 .layout-form{
     margin-left: 10px;
     width: 100%;
+}
+
+.left-sidebar, .right-sidebar{
+    font-size: 13px !important;
+}
+
+.left-sidebar textarea, .right-sidebar textarea{
+    font-size: 14px !important;
 }
