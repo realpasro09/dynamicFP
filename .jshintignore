@@ -1,1 +1,3 @@
 test/coverage/**
+packages/custom/fine-prints/public/assets/js/intro.js
+packages/custom/fine-prints/public/assets/css/introjs.css
