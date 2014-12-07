@@ -2,11 +2,14 @@
 {% block content %}
 
 <section style="color:#2b3e50">
-		<a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a>
+    <a class="btn btn-large btn-success show-me-how-button"
+       href="javascript:void(0);"
+       onclick="javascript:introJs().start();">Start</a>
+
 	<div class="layout-container">
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-md-10">
+			<div class="col-md-10 text-center">
 				{% if finePrint.field1MarkAsShowMeHow%}
 					<div data-intro="{{finePrint.field1Help}}">
 				{% endif %}

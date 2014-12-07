@@ -2,6 +2,12 @@ body{
     font-size: 13px;
     color: #000000;
 }
+
+.background{
+    background: #f7f9f9 !important;
+    background: url('../img/bg.png') !important;
+}
+
 .btnHelper{
 	width: 100%;
 }
@@ -78,4 +84,28 @@ body{
 
 .left-sidebar textarea, .right-sidebar textarea{
     font-size: 14px !important;
+}
+
+.show-me-how-button{
+    width: 100%;
+    position: relative;
+    bottom: 2px;
+}
+
+.preview-content-section{
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-clip: padding-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-color: #fff;
+    background-position: center;
+    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
 }
