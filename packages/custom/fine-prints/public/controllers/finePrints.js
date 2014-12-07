@@ -25,6 +25,12 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 		  field4Help: ''
       };
 
+	  $scope.preview=false;
+
+	  $scope.showPreview = function(){
+		  $scope.preview = !$scope.preview;
+	  }
+
       $scope.setStep = function(step){
           $scope.step = step;
       };
