@@ -13,6 +13,9 @@
 				<a style="color: black" class="btn" data-ng-click="remove(finePrint);">
 					<i class="glyphicon glyphicon-trash"></i>
 				</a>
+				<a style="color: black" class="btn" data-ng-click="showPreview();">
+					<i class="glyphicon glyphicon-list-alt"></i>
+				</a>
 			</td>
 		</tr>
 	</table>
@@ -24,4 +27,15 @@
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
 	</div>
+
+	<div ng-show="preview">
+		<h2>
+			Preview of Fine Print
+		</h2>
+		<iframe frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" ng-src="{{sharedLink}}">
+
+		</iframe>
+	</div>
+
+
 </section>
