@@ -1,6 +1,7 @@
 body{
     font-size: 13px;
     color: #000000;
+    background: url('../img/main_bg.jpg') !important;
 }
 
 .background{
@@ -108,4 +109,8 @@ body{
     padding-bottom: 20px;
     text-align: center;
     position: relative;
+}
+
+.pull-down-50{
+    margin-top: 50px;
 }
