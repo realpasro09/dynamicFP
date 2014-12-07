@@ -59,6 +59,7 @@
                 </div>
             </div>
             <div ng-switch-when="2">
+                <button ng-click="$parent.startAgain()" class="btn btn-warning"> &larr; Start Again</button>
                 <div ng-switch="finePrint.layoutData">
                     <div ng-switch-when="FirstLayout">
                         <div ng-include src="'packages/custom/fine-prints/public/views/dfpLayoutOne.html'">
