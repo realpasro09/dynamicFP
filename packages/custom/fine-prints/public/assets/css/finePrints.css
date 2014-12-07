@@ -5,6 +5,18 @@ body{
 .btnHelper{
 	width: 100%;
 }
+
+.btnHelper.large{
+	width: 350px;
+}
+.btnHelper.medium{
+	width: 255px;
+}
+
+.btnHelper.small{
+	width: 114px;
+}
+
 .finePrints-example h1 {
   background-color: purple
 }
