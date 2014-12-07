@@ -2,6 +2,12 @@ body{
     font-size: 13px;
     color: #000000;
 }
+
+.background{
+    background: #f7f9f9 !important;
+    background: url('../img/bg.png') !important;
+}
+
 .btnHelper{
 	width: 100%;
 }
