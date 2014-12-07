@@ -25,6 +25,14 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 		  field4Help: ''
       };
 
+	  $scope.share=false;
+
+	  $scope.showShare = function(){
+		  $scope.share = !$scope.share;
+	  };
+
+	  $scope.iframeHtml = '';
+
 	  $scope.preview=false;
 
 	  $scope.showPreview = function(){
@@ -145,6 +153,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
           }, function(finePrint) {
               $scope.finePrint = finePrint;
 			  $scope.sharedLink = window.location.origin + $scope.finePrint.link;
+			  $scope.iframeHtml = '<iframe frameborder=\'0\' style=\'overflow:hidden;height:100%;width:100%\' height=\'100%\' width=\'100%\' src=\''+ $scope.sharedLink+'\'> </iframe>';
               alertify.success('Fine print was loaded correctly.');
           }, function(data, status, headers, config) {
               alertify.error('Error loading the fine print with Id: '+$stateParams.finePrintId+'.');
