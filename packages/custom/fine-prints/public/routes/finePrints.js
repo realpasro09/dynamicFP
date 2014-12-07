@@ -35,6 +35,7 @@ angular.module('mean.fine-prints').config(['$stateProvider',
           .state('create finePrint', {
               url: '/finePrint/create',
               templateUrl: 'fine-prints/views/create.html',
+              reload: true, inherit: false,notify: true,
               resolve: {
                   loggedin: checkLoggedin
               }

@@ -1,4 +1,4 @@
-'use strict';
+https://trello.com/c/P6aHVMof/38-create-new-prints-should-reset-the-values-and-return-to-step-1'use strict';
 
 angular.element(document).ready(function() {
   //Fixing facebook bug with redirect

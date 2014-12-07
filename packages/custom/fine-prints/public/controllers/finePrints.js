@@ -6,24 +6,35 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
     $scope.package = {
       name: 'fine-prints'
     };
+
+      var resetFinePrint= function(){
+          $scope.finePrint = {
+              layoutData :'',
+              field1 :'',
+              field2 :'',
+              field3 :'',
+              field4 :'',
+              field1MarkAsShowMeHow : false,
+              field2MarkAsShowMeHow :false,
+              field3MarkAsShowMeHow :false,
+              field4MarkAsShowMeHow :false,
+              field1Help: '',
+              field2Help: '',
+              field3Help: '',
+              field4Help: ''
+          };
+      };
+
+      $scope.startAgain = function(){
+        $scope.step = 1;
+        this.title = '';
+        resetFinePrint();
+      };
+
       $scope.step = 1;
       $scope.link = '/DFP/';
       $scope.sharedLink = '';
-      $scope.finePrint = {
-          layoutData :'',
-          field1 :'',
-          field2 :'',
-          field3 :'',
-          field4 :'',
-          field1MarkAsShowMeHow : false,
-          field2MarkAsShowMeHow :false,
-          field3MarkAsShowMeHow :false,
-          field4MarkAsShowMeHow :false,
-		  field1Help: '',
-		  field2Help: '',
-		  field3Help: '',
-		  field4Help: ''
-      };
+      resetFinePrint();
 
 	  $scope.preview=false;
 
