@@ -29,7 +29,7 @@ angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope',
 
 	  $scope.showPreview = function(){
 		  $scope.preview = !$scope.preview;
-	  }
+	  };
 
       $scope.setStep = function(step){
           $scope.step = step;
