@@ -36,12 +36,14 @@ module.exports = {
     clientSecret: 'SECRET_KEY',
     callbackURL: 'http://localhost:3000/auth/linkedin/callback'
   },
-  emailFrom: 'SENDER EMAIL ADDRESS', // sender address like ABC <abc@example.com>
+  emailFrom: 'postmaster@kmiloaguilar.com', // sender address like ABC <abc@example.com>
   mailer: {
-    service: 'SERVICE_PROVIDER', // Gmail, SMTP
+    service: 'SMTP', // Gmail, SMTP
     auth: {
-      user: 'EMAIL_ID',
-      pass: 'PASSWORD'
-    }
+      user: 'postmaster@kmiloaguilar.com',
+      pass: '5ckxl0bhis41'
+    },
+	  host: 'smtp.mailgun.org',
+	  port: 587
   }
 };

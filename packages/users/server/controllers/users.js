@@ -158,7 +158,7 @@ exports.resetpassword = function(req, res, next) {
       req.logIn(user, function(err) {
         if (err) return next(err);
         return res.send({
-          user: user,
+          user: user
         });
       });
     });
@@ -171,6 +171,8 @@ exports.resetpassword = function(req, res, next) {
 function sendMail(mailOptions) {
   var transport = nodemailer.createTransport(config.mailer);
   transport.sendMail(mailOptions, function(err, response) {
+	  console.log('response: ');
+	  console.log(response);
     if (err) return err;
     return response;
   });
