@@ -39,6 +39,15 @@ body{
 	width: 700px
 }
 
+.txtInfo{
+	background-color: transparent;
+	border:0;
+}
+
+.input-group-addon{
+	background-color: transparent;
+}
+
 .layout-container{
     font-size: 17px;
     margin-top: 30px;

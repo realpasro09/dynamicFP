@@ -6,11 +6,14 @@
             <div class="col-md-1"></div>
 
             <div class="col-md-10">
-                <label class="label-dark">
-                    <input type="checkbox" name="checkbox" data-ng-model="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow"value="value">
-                    <span>Mark as show me how</span>
+				<div class="input-group input-group-sm">
+					  <span class="input-group-addon">
+						<input type="checkbox" name="checkbox" data-ng-model="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow"value="value">
+					  </span>
+					<input type="text" readonly name="textbox" class="txtInfo btnHelper large" ng-hide="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow" placeholder="Mark as show me how">
 					<input type="text" name="textbox" class="btnHelper large" ng-show="$parent.$parent.$parent.finePrint.field1MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field1Help" placeholder="Write some instructions for this section">
-                </label>
+				</div><!-- /input-group -->
+
 
                 <input name="title" type="text" class="button-dyp" id="title" placeholder="Title section" ng-model="$parent.$parent.$parent.finePrint.field1" required>
 
@@ -22,15 +25,17 @@
         <div class="row pull-down-20">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <label class="label-dark">
-                    <input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow">
-                    <span>Mark as show me how</span>
+                <div class="input-group input-group-sm">
+					<span class="input-group-addon">
+						<input type="checkbox" name="checkbox" value="value" data-ng-model="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow">
+					</span>
+					<input type="text" readonly name="textbox" class="txtInfo btnHelper large" ng-hide="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow" placeholder="Mark as show me how">
 					<input type="text" name="textbox" class="btnHelper large" ng-show="$parent.$parent.$parent.finePrint.field2MarkAsShowMeHow" data-ng-model="$parent.$parent.$parent.finePrint.field2Help" placeholder="Write some instructions for this section">
-                </label>
+                </div>
 
                 <textarea placeholder="Add your content" ng-model="$parent.$parent.$parent.finePrint.field2" class="content-text-area"></textarea>
             </div>
             <div class="col-md-1"></div>
-        </div>
+        </div2
     </div>
 </section>
