@@ -11,6 +11,13 @@
                 </div>
             </div>
 
+			<div style="padding-right: 20px">
+				<input name="companyWebsite" type="text" class="button-dyp" data-ng-model="finePrint.companyWebsite" id="companyWebsite" placeholder="www.company.com" />
+				<span>
+					(Optional)
+				</span>
+			</div>
+
             <div ng-switch="step">
                 <div ng-switch-when="1">
                     <div ng-switch="finePrint.selectedLayout">
