@@ -59,9 +59,11 @@ angular.module('mean.users')
                 //This is so an admin user will get full admin page
                 window.location.reload();
               } else {
+				  window.location.reload();
                 window.location = response.redirect;
               }
             } else {
+				window.location.reload();
               $location.url('/');
             }
           })
