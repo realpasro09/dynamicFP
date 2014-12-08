@@ -5,63 +5,63 @@
     <a class="btn btn-large btn-success show-me-how-button"
        href="javascript:void(0);"
        onclick="javascript:introJs().start();">Start</a>
-	<div class="layout-container">
-		<div class="row">
-			<div class="col-md-1"></div>
+    <div class="layout-container">
+        <div class="row">
+            <div class="col-md-1"></div>
 
-			<div class="col-md-10 text-center">
-				{% if finePrint.field1MarkAsShowMeHow%}
-				<div data-intro="">
-					{% endif %}
-					<h1>{{finePrint.field1}}</h1>
-					{% if finePrint.field1MarkAsShowMeHow%}
-				</div>
-				{% endif %}
-			</div>
+            <div class="col-md-10 text-center">
+                {% if finePrint.field1MarkAsShowMeHow%}
+                <div data-intro="{{finePrint.field1Help}}">
+                    {% endif %}
+                    <h1>{{finePrint.field1}}</h1>
+                    {% if finePrint.field1MarkAsShowMeHow%}
+                </div>
+                {% endif %}
+            </div>
 
-			<div class="col-md-1"></div>
-		</div>
+            <div class="col-md-1"></div>
+        </div>
 
-		<div class="row pull-down-20">
-			<div class="col-md-1"></div>
+        <div class="row pull-down-20">
+            <div class="col-md-1"></div>
 
-			<div class="col-md-3 left-sidebar">
-				{% if finePrint.field2MarkAsShowMeHow%}
-				<div data-intro="">
-					{% endif %}
-					<p>
-						{{finePrint.field2}}
-					</p>
-					{% if finePrint.field2MarkAsShowMeHow%}
-				</div>
-				{% endif %}
-			</div>
+            <div class="col-md-3 left-sidebar">
+                {% if finePrint.field2MarkAsShowMeHow%}
+                <div data-intro="{{finePrint.field2Help}}">
+                    {% endif %}
+                    <p>
+                    <pre>{{finePrint.field2}}</pre>
+                    </p>
+                    {% if finePrint.field2MarkAsShowMeHow%}
+                </div>
+                {% endif %}
+            </div>
 
-			<div class="col-md-7">
-				{% if finePrint.field3MarkAsShowMeHow%}
-				<div data-intro="">
-					{% endif %}
-					<p>
-						{{finePrint.field3}}
-					</p>
-					{% if finePrint.field3MarkAsShowMeHow%}
-				</div>
-				{% endif %}
-			</div>
+            <div class="col-md-7">
+                {% if finePrint.field3MarkAsShowMeHow%}
+                <div data-intro="{{finePrint.field3Help}}">
+                    {% endif %}
+                    <p>
+                    <pre>{{finePrint.field3}}</pre>
+                    </p>
+                    {% if finePrint.field3MarkAsShowMeHow%}
+                </div>
+                {% endif %}
+            </div>
 
-			<div class="col-md-1"></div>
-		</div>
-	</div>
-	<div class="layout-container">
-		<div class="row">
-			<div class="col-md-1">
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <div class="layout-container">
+        <div class="row">
+            <div class="col-md-1">
 
-			</div>
-			<div class="col-md-11">
-				<a href="{{finePrint.companyWebsite}}">Go back to website</a>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="col-md-11">
+                <a href="{{finePrint.companyWebsite}}">Go back to website</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 {% endblock %}

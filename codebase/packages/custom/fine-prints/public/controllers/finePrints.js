@@ -69,15 +69,21 @@ angular.module('mean.fine-prints', ['zeroclipboard']).
           return result;
       };
 
+      var replaceLineBreaks = function(text){
+        return text;
+        //return text.replace(/\n\r?/g, '<br />');
+      };
+
       $scope.create = function(isValid) {
           if (isValid) {
+
               var finePrint = new FinePrints({
                   title: this.title,
                   selectedLayout: $scope.finePrint.layoutData,
                   field1: $scope.finePrint.field1,
-                  field2: $scope.finePrint.field2,
-                  field3: $scope.finePrint.field3,
-                  field4: $scope.finePrint.field4,
+                  field2: replaceLineBreaks($scope.finePrint.field2),
+                  field3: replaceLineBreaks($scope.finePrint.field3),
+                  field4: replaceLineBreaks($scope.finePrint.field4),
                   field1MarkAsShowMeHow: $scope.finePrint.field1MarkAsShowMeHow,
                   field2MarkAsShowMeHow: $scope.finePrint.field2MarkAsShowMeHow,
                   field3MarkAsShowMeHow: $scope.finePrint.field3MarkAsShowMeHow,
