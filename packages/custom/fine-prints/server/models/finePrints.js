@@ -75,6 +75,10 @@ var FinePrintSchema = new Schema({
 		type: String,
 		trim: true
 	},
+	companyWebsite: {
+		type: String,
+		trim: true
+	},
 	user: {
         type: Schema.ObjectId,
         ref: 'User'

@@ -26,13 +26,15 @@ angular.module('mean.fine-prints', ['zeroclipboard']).
               field1Help: '',
               field2Help: '',
               field3Help: '',
-              field4Help: ''
+              field4Help: '',
+			  companyWebsite: ''
           };
       };
 
       $scope.startAgain = function(){
         $scope.step = 1;
         this.title = '';
+		  this.companyWebsite = '';
         resetFinePrint();
       };
 
@@ -84,7 +86,8 @@ angular.module('mean.fine-prints', ['zeroclipboard']).
 				  field1Help: $scope.finePrint.field1Help,
 				  field2Help: $scope.finePrint.field2Help,
 				  field3Help: $scope.finePrint.field3Help,
-				  field4Help: $scope.finePrint.field4Help
+				  field4Help: $scope.finePrint.field4Help,
+				  companyWebsite: $scope.finePrint.companyWebsite
 
               });
               finePrint.$save(function(response) {
@@ -99,6 +102,7 @@ angular.module('mean.fine-prints', ['zeroclipboard']).
               });
 
               this.title = '';
+			  this.companyWebsite = '';
           } else {
               $scope.submitted = true;
           }

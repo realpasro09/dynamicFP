@@ -60,6 +60,17 @@
                             </div>
                             <div class="col-md-1"></div>
                         </div>
+						<div class="form-group">
+							<label class="title">
+								Company Website
+							</label>
+							<div>
+								<input style="border: 1px solid gray;" name="companyWebsite" type="url" class="form-control" ng-model="$parent.finePrint.companyWebsite" id="companyWebsite" placeholder="http://www.company.com">
+								<span>
+									(Optional)
+								</span>
+							</div>
+						</div>
                         <div class="row">
                             <button ng-disabled="$parent.title === undefined || $parent.finePrint.layoutData === undefined"
                                     ng-click="setStep(2)" type="submit"
