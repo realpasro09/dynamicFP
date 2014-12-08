@@ -25,10 +25,10 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-7">
 				{% if finePrint.field2MarkAsShowMeHow%}
-				<div data-intro="">
+				<div data-intro="{{finePrint.field2Help}}">
 				{% endif %}
 				<p>
-					{{finePrint.field2}}
+                    <pre>{{finePrint.field2}}</pre>
 				</p>
 				{% if finePrint.field2MarkAsShowMeHow%}
 				</div>
@@ -36,10 +36,10 @@
 			</div>
 			<div class="col-md-3 right-sidebar">
 				{% if finePrint.field3MarkAsShowMeHow%}
-				<div data-intro="">
+				<div data-intro="{{finePrint.field3Help}}">
 				{% endif %}
 					<p>
-						{{finePrint.field3}}
+                    <pre>{{finePrint.field3}}</pre>
 					</p>
 				{% if finePrint.field3MarkAsShowMeHow%}
 				</div>
