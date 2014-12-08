@@ -31,6 +31,7 @@ FinePrints.register(function(app, auth, database) {
     });
 
   FinePrints.aggregateAsset('css', 'finePrints.css');
+  FinePrints.aggregateAsset('js', 'angular-zeroclipboard.js');
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback

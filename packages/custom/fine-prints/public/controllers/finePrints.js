@@ -1,6 +1,11 @@
 'use strict';
 
-angular.module('mean.fine-prints').controller('FinePrintsController', ['$scope', 'Global', 'FinePrints','$stateParams','$location',
+angular.module('mean.fine-prints', ['zeroclipboard']).
+		config(['uiZeroclipConfigProvider', function(uiZeroclipConfigProvider) {
+			uiZeroclipConfigProvider.setZcConf({
+				swfPath: '../bower_components/zeroclipboard/dist/ZeroClipboard.swf'
+			});
+		}]).controller('FinePrintsController', ['$scope', 'Global', 'FinePrints','$stateParams','$location',
   function($scope, Global, FinePrints,$stateParams,$location) {
     $scope.global = Global;
     $scope.package = {
