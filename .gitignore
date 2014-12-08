@@ -18,6 +18,10 @@ Icon
 .settings/
 .*.md.html
 
+.bower-cache
+.bower-registry
+.bower-tmp
+
 
 # --------------------
 # IntelliJ Files
