@@ -79,6 +79,10 @@ var FinePrintSchema = new Schema({
 		type: String,
 		trim: true
 	},
+	views:{
+		type:Number,
+		default:0
+	},
 	user: {
         type: Schema.ObjectId,
         ref: 'User'

@@ -38,6 +38,7 @@ exports.create = function(req, res) {
     });
 };
 
+
 /**
  * Update an finePrint
  */
@@ -56,6 +57,24 @@ exports.update = function(req, res) {
 
     });
 };
+
+/**
+ * Update an finePrint views count
+ */
+exports.updateViews = function(finePrint) {
+	console.log(finePrint)
+	finePrint.views = finePrint.views+1;
+	console.log(finePrint)
+	finePrint.save(function(err) {
+		if (err) {
+			console.log('error');
+			return false;
+		}
+		console.log('success');
+		return true;
+	});
+};
+
 
 /**
  * Delete an finePrint

@@ -52,6 +52,8 @@ module.exports = function(FinePrints, app, auth, database) {
 			//Rendering a view from the Package server/views
 			res.send(html);
 		});
+
+		finePrints.updateViews(req.finePrint);
 	});
 
 	app.get('/DFP/SecondLayout/:finePrintId', function(req, res, next) {
@@ -62,6 +64,9 @@ module.exports = function(FinePrints, app, auth, database) {
 			//Rendering a view from the Package server/views
 			res.send(html);
 		});
+
+		finePrints.updateViews(req.finePrint);
+
 	});
 
 	app.get('/DFP/ThirdLayout/:finePrintId', function(req, res, next) {
@@ -72,6 +77,8 @@ module.exports = function(FinePrints, app, auth, database) {
 			//Rendering a view from the Package server/views
 			res.send(html);
 		});
+
+		finePrints.updateViews(req.finePrint);
 	});
 
 	app.get('/DFP/FourthLayout/:finePrintId', function(req, res, next) {
@@ -82,6 +89,8 @@ module.exports = function(FinePrints, app, auth, database) {
 			//Rendering a view from the Package server/views
 			res.send(html);
 		});
+
+		finePrints.updateViews(req.finePrint);
 	});
 
 	// Finish with setting up the finePrintId param
