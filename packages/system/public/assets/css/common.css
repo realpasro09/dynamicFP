@@ -1,3 +1,29 @@
+.animate{
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+.first{
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.second{
+	color: royalblue;
+	background-image: -webkit-linear-gradient(92deg,#4169E1,#87CEFA);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.third{
+	color: limegreen;
+	background-image: -webkit-linear-gradient(92deg,#32CD32,#ADFF2F);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.bold{
+	font-weight: bold;
+}
 .landing{
     /*background: white;*/
     position: fixed;
