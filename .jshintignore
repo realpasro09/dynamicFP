@@ -1,3 +1,4 @@
 test/coverage/**
 packages/custom/fine-prints/public/assets/js/intro.js
 packages/custom/fine-prints/public/assets/css/introjs.css
+packages/custom/fine-prints/public/assets/js/angular-zeroclipboard.js
