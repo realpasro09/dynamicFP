@@ -20,6 +20,8 @@ SystemPackage.register(function(app, auth, database) {
 
   SystemPackage.aggregateAsset('css', 'common.css');
   SystemPackage.aggregateAsset('css', 'carousel.css');
+  SystemPackage.aggregateAsset('css', 'animate.css');
+  SystemPackage.aggregateAsset('css', 'animals.css')
 
   // The middleware in config/express will run before this code
 
