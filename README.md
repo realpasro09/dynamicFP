@@ -11,8 +11,13 @@ We are showing the fine prints of legal documents, tos, eula or any other docume
 
 Here provide couple screenshots of your project. You can use a tool like https://monosnap.com/welcome or https://droplr.com to take a screenshot. Animated gifs are also welcome.
 
-![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-terminal.png "Koding")
-![Koding](https://koding.com/a/site.landing/images/slideshow/2x/ss-ide.png "Koding")
+![Koding](/images/sc1.png "Koding")
+![Koding](/images/sc2.png "Koding")
+![Koding](/images/sc3.png "Koding")
+![Koding](/images/sc4.png "Koding")
+![Koding](/images/sc5.png "Koding")
+![Koding](/images/sc6.png "Koding")
+![Koding](/images/sc7.png "Koding")
 
 ## APIs used
 
