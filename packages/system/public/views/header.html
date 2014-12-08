@@ -21,12 +21,13 @@
       </li>
     </ul>
     <ul class="navbar-nav nav" data-ng-show="global.authenticated">
-      <li class="dropdown">
-        <a class="buttonAuthSelect" class="dropdown-toggle" dropdown-toggle="dropdown">
+      <li class="dropdown" dropdown>
+        <a href class="dropdown-toggle buttonAuthSelect" dropdown-toggle>
           {{global.user.name}} <b class="caret"></b>
         </a>
         <ul style="background: transparent" class="dropdown-menu">
-          <li><a class="buttonSubAuthSelect"  href="/logout">Log Out</a>
+          <li>
+			  <a class="buttonSubAuthSelect"  href="/logout">Log Out</a>
           </li>
         </ul>
       </li>
