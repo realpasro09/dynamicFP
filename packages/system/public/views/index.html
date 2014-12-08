@@ -8,18 +8,25 @@
                 </div>
                 <div style="height: 300px; padding-top: 7%" class="col-md-6">
                     <h2 style="color: black">No more boring fine prints... Now, you are ready to read!</h2>
-                    <p><a class="btn btn-lg btn-primary" href="#!/auth/register" role="button">Sign up today</a></p>
+                    <p>
+						<a ng-hide="global.authenticated" class="btn btn-lg btn-primary" href="#!/auth/register" role="button">
+							Sign up today
+						</a>
+						<a ng-show="global.authenticated" class="btn btn-lg btn-primary" href="#!/finePrint/create" role="button">
+							Create Fine Print
+						</a>
+					</p>
                 </div>
             </td>
             <td>
-                
+
             </td>
         </tr>
     </table>
-    
-    
-                    
-                    
+
+
+
+
 </div>
 
 <div class="container marketing" data-ng-controller="IndexController">
