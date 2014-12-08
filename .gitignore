@@ -53,13 +53,13 @@ node_modules/
 # --------------------
 # Bower Files
 # --------------------
-.bower-*/
-bower_components
+codebase/.bower-*/
+codebase/bower_components
 
 # --------------------
 # App Files
 # --------------------
-test/coverage/
-modules/public/
-modules/views/
-/public/build/
+codebase/test/coverage/
+codebase/modules/public/
+codebase/modules/views/
+codebase/public/build/
